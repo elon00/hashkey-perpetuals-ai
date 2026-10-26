@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "hashkey-perpetuals-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "HashKey Chain",
+        "PROJECT_TICKER": "HKPERP"
+      },
+      "tools": [
+        {
+          "name": "verify_hkperp_invariants",
+          "description": "Verifies deterministic invariants for HashKey Perpetuals AI on HashKey Chain."
+        },
+        {
+          "name": "execute_hkperp_action",
+          "description": "Executes authenticated DeFi state transition."
+        }
+      ]
+    }
+  }
+}
